@@ -78,6 +78,7 @@ Manual walkthrough: sign in as admin, add a client, create a project for that cl
 
 Disabling seed creates no users; production account provisioning is not implemented. A reverse proxy must preserve the public Host header for origin validation. Use TLS, secure cookies, a trusted proxy configuration, persistent database backups, and proper account management before deployment.
 
+
 ## Deliberate limits and next steps
 
 This version has no registration/password reset, client portal, real email or payment integrations, file uploads, recurring invoices, tax calculations, pagination, editing of all record fields, or project archival UI. A sent/paid flag is not proof of delivery/payment. The in-memory login throttle is for a single process and is not a distributed abuse defense. Audit entries and mutations are separate statements, so hard failures can leave a mutation without an activity entry. Large workspaces would need paginated endpoints and transactional services.
